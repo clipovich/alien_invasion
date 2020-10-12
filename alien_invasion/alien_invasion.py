@@ -60,11 +60,11 @@ class AlienInvasion:
         """Respond to bullet-alien collisions."""
         # Remove any aliens that have collided with any bullets
         # three times. Remove any bullets that have collided with
-        # and alien.
-        pygame.sprite.groupcollide(
-                self.bullets, self.aliens, True, False)
-        if self.aliens.settings.alien_hit_limit >= 0:
-            self.aliens.remove()
+        # an alien.
+        colisions = pygame.sprite.groupcollide(
+                self.bullets, self.aliens, True, True)
+        # if self.aliens.settings.alien_hit_limit >= 0:
+        #    self.aliens.remove()
 
         if not self.aliens:
             # Destroy existing bullets and create new fleet.
