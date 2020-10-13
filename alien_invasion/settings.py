@@ -21,6 +21,5 @@ class Settings:
         # Alien settings
         self.alien_speed = .5
         self.fleet_drop_speed = 10
-        self.alien_hit_limit = 3
         # fleet_direction of 1 represents down; -1 represents up.
         self.fleet_direction = 1
